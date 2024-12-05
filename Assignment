@@ -1,0 +1,67 @@
+1. Write the code to plot the bar chart above
+Below is Python code to plot a bar chart for a categorical variable (e.g., pizza toppings):
+
+import matplotlib pyplot as plt
+# Data for the bar chart
+categories = ['Pepperoni', 'Mushroom',
+'Spinach', 'Pineapple', 'Onion']
+proportions = [0.4, 0.25, 0.283, 0.05,
+0.017] # Sample proportions
+# Create the bar chart
+plt. figure(figsize=(8, 5))
+plt. bar(categories, proportions, color='skyblue', edgecolor='black', alpha=0.7)
+plt.title("Proportions of Pizza
+Toppings")
+plt. xlabel("Toppings")
+plt.ylabel("Proportion")
+plt grid(axis='y', linestyle='--', alpha=0.7)
+
+2a. Histogram of Breath-Holding Times (Ignoring Sex)
+import matplotlib.pyplot as plt
+# Sample breath-holding times
+times = [40, 35, 50, 45, 55, 37, 42, 30, 38, 50, 45, 48, 55, 32, 40,39, 41, 33,
+36, 471
+# Create the histogram
+plt. figure(figsize=(8, 5)) plt.hist(times, bins=7, color='green', edgecolor='black', alpha=0.7)
+plt.title("Histogram of Breath-Holding Times")
+plt. xlabel("Time (seconds)")
+plt. ylabel("Frequency")
+plt grid(axis='y', linestyle='--', alpha=0.7) plt. show() 
+
+2b. Side-by-Side Dot Plot by Sex
+# Sample breath-holding times by sex
+male_times = [40, 50, 55, 42, 50, 45, 41, 471
+female_times = [35, 45, 37, 30, 38, 48, 32, 39, 33, 361
+# Create the side-by-side dot plot
+plt. figure(figsize=(8, 5)) plt. plot(male_times, [1] * len (male_times), 'o', label='Male', color='blue', alpha=0.7) plt. plot(female_times, [0] *
+len(female_times), 'o', label='Female', color='pink', alpha=0.7)
+plt. title("Side-by-Side Dot Plot of Breath-Holding Times by Sex") plt. xlabel("Time (seconds)")
+plt.yticks([0, 1], ['Female', 'Male'])
+plt. legend ( )
+plt. show()
+
+3a. Dot Plots to Compare Groups (Music vs. No Music)
+# Sample plant growth data
+music_growth = [12, 14, 13, 15, 16, 15, 14, 13, 14, 151
+no_music_growth = [10, 9, 11, 12, 10, 11, 10, 9, 10, 111
+# Create the dot plot
+plt. figure(figsize=(8, 5)) plt. plot(music_growth, [1] * len (music _growth), 'o', label='Music', color='blue', alpha=0.7)
+plt. plot(no_music_growth, [0] * len (no_music_growth), 'o', label='No Music', color='red', alpha=0.7)
+plt.title("Dot Plot of Plant Growth") plt. xlabel("Growth (cm)")
+plt.yticks([0, 1], ['No Music',
+'Music'])
+plt. legend ( )
+plt. show()
+
+3b. Histograms to Compare Groups
+# Create the histograms
+plt. figure(figsize=(10, 5))
+# Histogram for Music group
+plt.hist(music_growth, bins=6, color='blue', alpha=0.7, label='Music', edgecolor='black')
+# Histogram for No Music group
+plt. hist(no_music_growth, bins=6, color='red', alpha=0.7, label='No
+Music', edgecolor='black')
+plt.title("Histogram of Plant Growth") plt. xlabel( "Growth (cm)")
+plt. ylabel("Frequency")
+plt. legend ( )
+plt-grid(axis='y', linestyle='--', alpha=0.7) plt. show ()
